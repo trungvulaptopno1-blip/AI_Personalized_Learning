@@ -2,18 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom scrollbar cho danh sách file nếu cần */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  @apply text-gray-900 bg-gray-50;
+}
+
+#root {
+  @apply min-h-screen;
+}
+
+/* Custom scrollbar tối giản */
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
 }
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: #1f2937;
-  border-radius: 3px;
+  @apply bg-gray-100 rounded;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #4B5563;
-  border-radius: 3px;
-}
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #6B7280;
+  @apply bg-gray-300 rounded hover:bg-gray-400;
 }
